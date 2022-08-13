@@ -1,0 +1,28 @@
+---
+title: Posts
+layout: 'base.njk'
+---
+
+<section class="hero is-info">
+  <div class="hero-body">
+    <p class="title">
+      Posts
+    </p>
+    <p class="subtitle">
+      Info subtitle
+    </p>
+  </div>
+</section>
+
+{% for post in collections.post %}
+
+  <section class="section">
+    <h1 class="title">
+      <a href="{{post.url}}">{{post.data.title}}</a>
+    </h1>
+    <h2 class="subtitle">
+      {{ post.data.description }}
+    </h2>
+  </section>
+
+{% endfor %}
